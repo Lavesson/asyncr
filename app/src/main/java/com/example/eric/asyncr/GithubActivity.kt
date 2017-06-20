@@ -40,7 +40,7 @@ class GithubActivity : AppCompatActivity() {
             val txt = input.text
 
             if (txt.isEmpty()) {
-                Toast.makeText(this, "Please enter a name", Toast.LENGTH_SHORT).show()
+                toast("Please enter a name")
             } else {
                 AsyncFetch(progress, {
                     r -> populate(JSONObject(r))
